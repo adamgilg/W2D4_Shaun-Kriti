@@ -5,9 +5,12 @@ require 'nokogiri'
 
 
 class IceCreamFinder
+#AG: We hid our API key in a separate file that we required in
+#AG: and then put in a .gitignore file so that file didn't get added to the repo
   API_KEY = "AIzaSyCEhaLs5Wf7UPLjD_3o-O9Wlf9eNaG4E-A"
 
   def initialize
+  #AG: Slightly (ie totally) unnecessary initialize, but I like your style. 
     puts "Hey, there! Welcome to Icecream finder :)"
   end
 
@@ -30,7 +33,7 @@ class IceCreamFinder
     puts
     make_clown
   end
-
+#AG: more of this, please.
   def make_clown
     puts "Enjoy your nomnom!"
     puts " @@ "
@@ -45,6 +48,7 @@ class IceCreamFinder
 
   def get_geocode
     address = gets.chomp.split(" ")
+    #AG: Addressable will do the joining for you - no need to split/join at all
     address = address.join("+")
 
     host_request = Addressable::URI.new(
