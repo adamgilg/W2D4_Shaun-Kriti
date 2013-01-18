@@ -30,7 +30,7 @@ class TwitterClient
       end
     end
   end
-
+#AG: Nice run method. Very user friendly. Ours - not so much. 
   def run
     puts "What would you like to do??"
     puts "Tweet(T), Direct Message (DM), Get Timeline (GT), Get Other User's status (O)"
@@ -55,6 +55,7 @@ class TwitterClient
 
     @access_token.post("https://api.twitter.com/1.1/statuses/update.json", tweet)
     puts "Your tweet has been twat."
+    #AG: Twit.
   end
 
   def get_timeline
